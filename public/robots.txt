@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+Sitemap: https://paul-martini-sanitaer-astro.pages.dev/sitemap-index.xml

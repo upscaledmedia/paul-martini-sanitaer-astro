@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Über uns | Paul Martini Sanitär · 3 Generationen Handwerk"
+  description="Die Geschichte des Familienbetriebs Paul Martini aus Kehrig bei Mayen. Von Franz-Josef über Paul zu Sebastian Martini — drei Generationen SHK-Handwerk."
+>
+
+  <!-- Hero — Split with placeholder on right -->
+  <section class="bg-[var(--color-section-dark)] py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[var(--color-primary)] font-semibold text-sm uppercase tracking-wide mb-3">Familienbetrieb</p>
+          <h1 class="text-white mb-6">Drei Generationen Handwerk. Ein Versprechen.</h1>
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            Was mit Franz-Josef Martini begann, setzt Sebastian Martini heute mit demselben Anspruch fort:
+            saubere Arbeit, ehrliche Preise, persönlicher Service.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-8">
+            <div class="flex items-center gap-2 text-gray-300 text-sm">
+              <span class="text-yellow-400">★★★★★</span>
+              5,0 Google-Sterne
+            </div>
+            <div class="w-px h-5 bg-gray-600 self-center"></div>
+            <span class="text-gray-300 text-sm">Familienbetrieb seit Jahrzehnten</span>
+          </div>
+        </div>
+        <!-- Photo placeholder -->
+        <div class="flex justify-center">
+          <div class="w-80 h-96 bg-[var(--color-secondary-light)] rounded-2xl border-2 border-[var(--color-primary)] flex flex-col items-center justify-center p-8 text-center">
+            <div class="w-20 h-20 bg-[var(--color-primary)] rounded-full flex items-center justify-center mb-4">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+            </div>
+            <p class="text-[var(--color-primary)] font-semibold text-sm uppercase tracking-wide mb-2">Sebastian Martini</p>
+            <p class="text-gray-300 text-sm">Inhaber, 3. Generation</p>
+            <p class="text-gray-400 text-xs mt-4">Polcher Str. 29A<br/>56729 Kehrig bei Mayen</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Geschichte — horizontal timeline -->
+  <section class="py-16 lg:py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-[var(--color-primary-text)] font-semibold text-sm uppercase tracking-wide mb-3">Die Geschichte</p>
+        <h2>Drei Generationen — eine Familie</h2>
+      </div>
+      <!-- Timeline -->
+      <div class="relative">
+        <!-- Horizontal line (desktop) -->
+        <div class="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-[var(--color-border)] z-0"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8 relative z-10">
+          {[
+            {
+              gen: '1. Generation',
+              name: 'Franz-Josef Martini',
+              era: 'Die Gründung',
+              desc: 'Mit handwerklichem Geschick und dem Willen, den Menschen in der Region zu helfen, legte Franz-Josef Martini den Grundstein des Familienbetriebs. Qualität und Verlässlichkeit waren von Anfang an das Markenzeichen.',
+              color: 'bg-[var(--color-surface)]',
+              dot: 'bg-[var(--color-text-muted)]',
+            },
+            {
+              gen: '2. Generation',
+              name: 'Paul Martini',
+              era: 'Das Wachstum',
+              desc: 'Paul Martini übernahm den Betrieb und erweiterte das Leistungsangebot. Neue Technologien, mehr Kunden — aber immer mit dem gleichen persönlichen Anspruch wie sein Vater.',
+              color: 'bg-[var(--color-surface-alt)]',
+              dot: 'bg-[var(--color-secondary)]',
+            },
+            {
+              gen: '3. Generation',
+              name: 'Sebastian Martini',
+              era: 'Die Gegenwart',
+              desc: 'Sebastian Martini führt den Familienbetrieb heute mit modernem Know-how und traditionellen Werten. Wärmepumpen, Badsanierungen, Klimatechnik — und immer: ein persönlicher Ansprechpartner für Sie.',
+              color: 'bg-[var(--color-primary)] bg-opacity-5',
+              dot: 'bg-[var(--color-primary)]',
+            },
+          ].map((gen, i) => (
+            <div class="flex flex-col items-center text-center">
+              <!-- Dot -->
+              <div class={`w-12 h-12 ${gen.dot} rounded-full flex items-center justify-center text-white font-bold text-lg mb-4 border-4 border-white shadow-md`}>
+                {i + 1}
+              </div>
+              <div class={`${gen.color} rounded-2xl p-6 border border-[var(--color-border)] w-full`}>
+                <p class="text-[var(--color-primary-text)] text-xs font-semibold uppercase tracking-wide mb-1">{gen.gen}</p>
+                <h3 class="text-[var(--color-secondary)] mb-1 text-lg">{gen.name}</h3>
+                <p class="text-[var(--color-text-muted)] text-xs font-medium mb-3 italic">{gen.era}</p>
+                <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">{gen.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Werte — 2x2 grid -->
+  <section class="py-16 bg-[var(--color-surface)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary-text)] font-semibold text-sm uppercase tracking-wide mb-3">Unsere Werte</p>
+        <h2>Was uns antreibt</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {[
+          { icon: 'M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z', title: 'Ehrlichkeit', desc: 'Wir sagen, was wirklich sinnvoll ist — auch wenn das bedeutet, weniger zu verkaufen. Langfristige Kundenbeziehungen sind uns wichtiger als kurzfristige Umsätze.' },
+          { icon: 'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z', title: 'Qualität', desc: 'Handwerk das hält. Wir verwenden Markenmaterialien, arbeiten nach aktuellen Normen und stehen für unsere Arbeit.' },
+          { icon: 'M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z', title: 'Persönlichkeit', desc: 'Sie kennen Ihren Ansprechpartner. Wir sind ein Familienbetrieb — kein Konzern. Das merken Sie bei jedem Kontakt.' },
+          { icon: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z', title: 'Regional verwurzelt', desc: 'Kehrig, Mayen, Polch — das ist unsere Heimat. Wir kennen die Region, unsere Kunden und die lokalen Besonderheiten.' },
+        ].map(item => (
+          <div class="bg-white rounded-2xl p-8 border border-[var(--color-border)] shadow-sm">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-[var(--color-primary)] rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d={item.icon}/></svg>
+              </div>
+              <h3 class="text-[var(--color-secondary)] text-lg">{item.title}</h3>
+            </div>
+            <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Betrieb Info -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[var(--color-primary-text)] font-semibold text-sm uppercase tracking-wide mb-3">Der Betrieb</p>
+          <h2 class="mb-6">Ihr Partner für Sanitär, Heizung &amp; Klima</h2>
+          <p class="text-[var(--color-text-muted)] mb-4 leading-relaxed">
+            Paul Martini Sanitär · Heizung · Klima ist ein eingetragener SHK-Fachbetrieb mit Meisterbetrieb.
+            Wir sind Mitglied der Handwerkskammer Koblenz und führen alle Arbeiten nach aktuellen DIN-Normen durch.
+          </p>
+          <p class="text-[var(--color-text-muted)] mb-6 leading-relaxed">
+            Unser Team besteht aus erfahrenen Gesellinnen und Gesellen, die alle bei uns ausgebildet oder langjährig im Betrieb tätig sind.
+          </p>
+          <a href="/kontakt/" class="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-[var(--color-primary-dark)] transition-colors">
+            Kontakt aufnehmen
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          {[
+            { label: 'Öffnungszeiten', value: 'Mo–Fr 7:45–16:00 Uhr' },
+            { label: 'Adresse', value: 'Polcher Str. 29A, 56729 Kehrig' },
+            { label: 'Telefon', value: '02651 4019589' },
+            { label: 'E-Mail', value: 'basti.martini@web.de' },
+          ].map(item => (
+            <div class="bg-[var(--color-surface)] rounded-xl p-5 border border-[var(--color-border)]">
+              <p class="text-[var(--color-primary-text)] text-xs font-semibold uppercase tracking-wide mb-1">{item.label}</p>
+              <p class="text-[var(--color-text)] text-sm font-medium">{item.value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zahlen & Fakten -->
+  <section class="py-16 bg-[var(--color-secondary)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-white text-center mb-12">Zahlen &amp; Fakten</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        {[
+          { value: '3', unit: 'Generationen', sub: 'Familienbetrieb' },
+          { value: '5,0', unit: 'Sterne', sub: 'Google Bewertung' },
+          { value: '15', unit: 'Bewertungen', sub: 'alle 5 Sterne' },
+          { value: '215.000', unit: 'EW', sub: 'Einzugsgebiet' },
+        ].map(item => (
+          <div>
+            <div style="font-family: var(--font-heading); font-weight: 800;" class="text-[var(--color-primary)] text-4xl lg:text-5xl">{item.value}</div>
+            <div class="text-white font-semibold mt-1 text-sm">{item.unit}</div>
+            <div class="text-gray-400 text-xs mt-0.5">{item.sub}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-[var(--color-primary)]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-white mb-4">Lernen Sie uns kennen</h2>
+      <p class="text-orange-100 mb-8">Rufen Sie uns an oder schreiben Sie uns — wir sind für Sie da.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+4926514019589" class="bg-white text-[var(--color-secondary)] px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors">
+          02651 4019589
+        </a>
+        <a href="/kontakt/" class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-[var(--color-primary)] transition-colors text-center">
+          Nachricht schreiben
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

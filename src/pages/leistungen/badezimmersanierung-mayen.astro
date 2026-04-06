@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Badsanierung Mayen | Paul Martini Sanitär"
+  description="Badezimmersanierung aus einer Hand in Mayen & Umgebung. Planung, Fliesen, Sanitär — Ihr Traumbad vom Fachbetrieb. Jetzt anfragen: 02651 4019589"
+>
+
+  <!-- Hero — different layout: full-width with overlapping card -->
+  <section class="bg-[var(--color-secondary)] py-16 lg:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" aria-hidden="true">
+      <div class="absolute top-0 left-0 w-full h-full" style="background-image: repeating-linear-gradient(45deg, #E85000 0, #E85000 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center gap-2 text-sm text-gray-400">
+          <li><a href="/" class="hover:text-[var(--color-primary-light)] transition-colors">Startseite</a></li>
+          <li aria-hidden="true" class="text-gray-600">›</li>
+          <li><a href="/leistungen/" class="hover:text-[var(--color-primary-light)] transition-colors">Leistungen</a></li>
+          <li aria-hidden="true" class="text-gray-600">›</li>
+          <li class="text-gray-200" aria-current="page">Badsanierung</li>
+        </ol>
+      </nav>
+      <div class="max-w-2xl">
+        <p class="text-[var(--color-primary)] font-semibold text-sm uppercase tracking-wide mb-3">Badsanierung Mayen</p>
+        <h1 class="text-white mb-6">Ihr Traumbad — komplett aus einer Hand</h1>
+        <p class="text-gray-300 text-lg leading-relaxed mb-8">
+          Von der Planung über Fliesen und Sanitärinstallation bis zur Fertigstellung.
+          Kein Koordinationsaufwand, ein Ansprechpartner, saubere Ausführung.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/kontakt/" class="bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-[var(--color-primary-dark)] transition-colors text-center">
+            Kostenloses Beratungsgespräch
+          </a>
+          <a href="tel:+4926514019589" class="border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-6 py-3 rounded-lg font-semibold text-sm hover:bg-[var(--color-primary)] hover:text-white transition-colors text-center">
+            02651 4019589
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we offer — horizontal scroll cards on mobile -->
+  <section class="py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2>Was Ihr neues Bad umfasst</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {[
+          { num: '01', title: 'Planung &amp; Beratung', desc: 'Individuelle Badplanung passend zu Ihren Wünschen, Platzverhältnissen und Budget.' },
+          { num: '02', title: 'Sanitärinstallation', desc: 'Fachgerechte Installation von Dusche, Badewanne, WC, Waschtisch und Leitungen.' },
+          { num: '03', title: 'Fliesen &amp; Böden', desc: 'Fliesenarbeiten in jedem Stil — modern, klassisch oder bodenebene Dusche.' },
+          { num: '04', title: 'Elektro &amp; Licht', desc: 'Koordination aller Gewerke — auch Elektrik und Belüftung aus einer Hand möglich.' },
+        ].map(item => (
+          <div class="bg-[var(--color-surface)] rounded-2xl p-6 border-t-4 border-[var(--color-primary)]">
+            <span class="text-[var(--color-primary)] font-bold text-2xl" style="font-family: var(--font-heading);">{item.num}</span>
+            <h3 class="text-[var(--color-secondary)] mt-2 mb-2 text-base" set:html={item.title}></h3>
+            <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="mb-4 text-2xl">Badsanierung in Mayen</h2>
+          <p class="text-[var(--color-text-muted)] mb-4 text-sm leading-relaxed">
+            Ein neues Bad ist eine Investition, die sich täglich auszahlt. Als SHK-Fachbetrieb
+            kümmern wir uns um alle Gewerke — das spart Ihnen Zeit, Nerven und oft auch Geld.
+          </p>
+          <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Ob begehbare Dusche, barrierefreies Bad oder klassische Badewanne: Wir setzen Ihre Vorstellungen
+            handwerklich einwandfrei um. Transparent im Preis, pünktlich im Termin.
+          </p>
+        </div>
+        <div>
+          <h2 class="mb-4 text-2xl">Barrierefrei &amp; altersgerecht</h2>
+          <p class="text-[var(--color-text-muted)] mb-4 text-sm leading-relaxed">
+            Barrierefreie Bäder bieten Komfort für Jung und Alt. Bodenebene Duschen, Haltegriffe,
+            erhöhte WCs — wir kennen die aktuellen Normen und setzen sie sicher um.
+          </p>
+          <ul class="space-y-2 text-[var(--color-text-muted)] text-sm">
+            <li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E85000" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Bodenebene Walk-In-Duschen</li>
+            <li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E85000" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Haltegriffe und Sitze</li>
+            <li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E85000" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>KfW-Förderprogramme möglich</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-14 bg-[var(--color-section-dark)]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-white text-center mb-10">Ihr Badsanierungsprojekt — Schritt für Schritt</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {[
+          { step: '1', title: 'Beratungstermin', desc: 'Wir kommen zu Ihnen, schauen uns das Bad an und besprechen Ihre Wünsche.' },
+          { step: '2', title: 'Angebot &amp; Planung', desc: 'Detailliertes Angebot mit allen Positionen — keine versteckten Kosten.' },
+          { step: '3', title: 'Ausführung', desc: 'Saubere, zügige Montage durch unser erfahrenes Team. Termine werden eingehalten.' },
+          { step: '4', title: 'Übergabe', desc: 'Gemeinsame Abnahme, Einweisung und saubere Übergabe. Fertig!' },
+        ].map(item => (
+          <div class="bg-[var(--color-secondary-light)] rounded-xl p-6 border border-gray-700">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 bg-[var(--color-primary)] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">{item.step}</div>
+              <h3 class="text-white text-sm font-semibold" set:html={item.title}></h3>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-10">Häufige Fragen zur Badsanierung</h2>
+      <div class="space-y-3">
+        {[
+          { q: 'Wie lange dauert eine Badsanierung?', a: 'Eine komplette Badsanierung dauert in der Regel 1–2 Wochen, je nach Umfang. Wir planen mit Ihnen realistisch und halten Termine ein.' },
+          { q: 'Was kostet eine Badsanierung?', a: 'Jedes Bad ist individuell. Wir erstellen Ihnen ein kostenloses, detailliertes Angebot nach einem Vor-Ort-Termin. Typisch: einfache Sanierung ab ca. 5.000 €, Komplettumbau 10.000–20.000 €.' },
+          { q: 'Kann ich während der Sanierung das Bad nutzen?', a: 'In der Regel ist das Bad während der Hauptarbeiten nicht nutzbar. Wir planen die Arbeiten so, dass die Zeit möglichst kurz ist.' },
+          { q: 'Übernehmen Sie alle Gewerke?', a: 'Ja, wir koordinieren als Generalunternehmer auch Fliesenleger, Elektriker und weitere Gewerke — so haben Sie nur einen Ansprechpartner.' },
+        ].map(item => (
+          <details class="bg-white border border-[var(--color-border)] rounded-xl overflow-hidden group">
+            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-[var(--color-secondary)] text-sm select-none">
+              <span>{item.q}</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0 text-[var(--color-primary)] group-open:rotate-180 transition-transform" aria-hidden="true"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-[var(--color-text-muted)] text-sm leading-relaxed border-t border-[var(--color-border)] pt-4">
+              {item.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-[var(--color-primary)]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-white mb-4">Ihr neues Bad wartet auf Sie!</h2>
+      <p class="text-orange-100 mb-8">Kostenloser Beratungstermin — wir kommen direkt zu Ihnen nach Hause.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+4926514019589" class="bg-white text-[var(--color-secondary)] px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors">
+          02651 4019589 anrufen
+        </a>
+        <a href="/kontakt/" class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-[var(--color-primary)] transition-colors text-center">
+          Anfrage schreiben
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

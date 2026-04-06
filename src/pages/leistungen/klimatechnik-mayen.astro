@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Klimatechnik Mayen | Paul Martini Sanitär"
+  description="Klimaanlagen & Split-Systeme in Mayen & Umgebung. Planung, Installation und Wartung vom Fachbetrieb. Angebot anfordern: 02651 4019589"
+>
+
+  <!-- Hero — split with icon right -->
+  <section class="bg-gradient-to-br from-[var(--color-section-dark)] to-[var(--color-secondary)] py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center gap-2 text-sm text-gray-400">
+          <li><a href="/" class="hover:text-[var(--color-primary-light)] transition-colors">Startseite</a></li>
+          <li aria-hidden="true" class="text-gray-600">›</li>
+          <li><a href="/leistungen/" class="hover:text-[var(--color-primary-light)] transition-colors">Leistungen</a></li>
+          <li aria-hidden="true" class="text-gray-600">›</li>
+          <li class="text-gray-200" aria-current="page">Klimatechnik</li>
+        </ol>
+      </nav>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[var(--color-primary)] font-semibold text-sm uppercase tracking-wide mb-3">Klimaanlagen Mayen</p>
+          <h1 class="text-white mb-6">Klimatechnik — angenehm kühl im Sommer, warm im Winter</h1>
+          <p class="text-gray-300 text-lg leading-relaxed mb-8">
+            Moderne Split-Klimaanlagen kühlen effizient und heizen gleichzeitig.
+            Wir planen, installieren und warten Ihre Anlage fachgerecht.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/kontakt/" class="bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-[var(--color-primary-dark)] transition-colors text-center">
+              Kostenlos anfragen
+            </a>
+            <a href="tel:+4926514019589" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-white hover:text-[var(--color-secondary)] transition-colors text-center">
+              02651 4019589
+            </a>
+          </div>
+        </div>
+        <div class="hidden lg:flex justify-center items-center">
+          <div class="relative">
+            <div class="w-64 h-64 bg-[var(--color-primary)] bg-opacity-20 rounded-full flex items-center justify-center border-2 border-[var(--color-primary)]">
+              <svg width="100" height="100" viewBox="0 0 24 24" fill="#E85000" aria-hidden="true">
+                <path d="M22 11h-4.17l3.24-3.24-1.41-1.42L15 11h-2V9l4.66-4.66-1.42-1.41L13 6.17V2h-2v4.17L7.76 2.93 6.34 4.34 11 9v2H9L4.34 6.34 2.93 7.76 6.17 11H2v2h4.17l-3.24 3.24 1.41 1.42L9 13h2v2l-4.66 4.66 1.42 1.41L11 17.83V22h2v-4.17l3.24 3.24 1.42-1.41L13 15v-2h2l4.66 4.66 1.41-1.42L17.83 13H22z"/>
+              </svg>
+            </div>
+            <div class="absolute -top-4 -right-4 bg-white text-[var(--color-secondary)] px-4 py-2 rounded-xl shadow-lg text-sm font-bold">
+              Kühlen &amp; Heizen
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits horizontal bar -->
+  <section class="py-10 bg-[var(--color-primary)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center text-white">
+        {[
+          { value: 'A+++', label: 'Energieeffizienz' },
+          { value: 'Split', label: 'Systeme verfügbar' },
+          { value: '360°', label: 'Service' },
+          { value: '1 Team', label: 'Ansprechpartner' },
+        ].map(item => (
+          <div>
+            <div style="font-family: var(--font-heading); font-weight: 800;" class="text-2xl lg:text-3xl text-white">{item.value}</div>
+            <div class="text-orange-100 text-sm">{item.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-12">Unsere Klimatechnik-Leistungen</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Split-Klimaanlage', desc: 'Für einzelne Räume — leise, effizient, einfach zu bedienen. Ideal für Schlafzimmer, Büros und Wohnräume.' },
+          { title: 'Multi-Split-Systeme', desc: 'Ein Außengerät versorgt mehrere Räume. Die wirtschaftlichste Lösung für Häuser und Gewerbe.' },
+          { title: 'Luft-Luft-Wärmepumpe', desc: 'Klimaanlage und Heizung in einem. Ideal als Ergänzung oder Alternative zur klassischen Heizung.' },
+          { title: 'Klimaservice &amp; Wartung', desc: 'Regelmäßige Wartung sichert Effizienz, verlängert Lebensdauer und ist gesetzlich vorgeschrieben.' },
+          { title: 'Gewerbe-Klimatisierung', desc: 'Büros, Praxen, Geschäfte — wir planen und installieren professionelle Gewerbeanlagen.' },
+          { title: 'Klimaanlagen-Reparatur', desc: 'Anlage defekt? Wir diagnostizieren und reparieren schnell und kostentransparent.' },
+        ].map(item => (
+          <div class="bg-[var(--color-surface)] rounded-xl p-6 border border-[var(--color-border)] hover:border-[var(--color-primary)] transition-colors">
+            <div class="w-10 h-10 bg-[var(--color-primary)] rounded-lg flex items-center justify-center mb-4">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <h3 class="text-[var(--color-secondary)] mb-2 text-base" set:html={item.title}></h3>
+            <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-14 bg-[var(--color-surface-alt)]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-10">Von der Planung zur Installation</h2>
+      <div class="space-y-4">
+        {[
+          { step: '01', title: 'Besichtigung &amp; Beratung', desc: 'Wir begutachten die Räumlichkeiten, klären Ihre Anforderungen und beraten zur besten Lösung.' },
+          { step: '02', title: 'Angebot &amp; Produktauswahl', desc: 'Transparentes Angebot mit empfohlenen Geräten. Wir erklären Unterschiede und Effizienzklassen.' },
+          { step: '03', title: 'Fachgerechte Installation', desc: 'Montage durch ausgebildete Klimatechniker. Sauber, störungsarm, nach Herstellervorgaben.' },
+          { step: '04', title: 'Einweisung &amp; Wartungsvertrag', desc: 'Vollständige Einweisung und auf Wunsch Abschluss eines Wartungsvertrags für sorgenfreien Betrieb.' },
+        ].map(item => (
+          <div class="flex gap-5 bg-white rounded-xl p-6 border border-[var(--color-border)] shadow-sm">
+            <div class="flex-shrink-0 w-10 h-10 bg-[var(--color-secondary)] rounded-full flex items-center justify-center text-white font-bold text-sm">
+              {item.step}
+            </div>
+            <div>
+              <h3 class="text-[var(--color-secondary)] mb-1 text-base font-semibold" set:html={item.title}></h3>
+              <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-10">Häufige Fragen zur Klimatechnik</h2>
+      <div class="space-y-3">
+        {[
+          { q: 'Brauche ich eine Genehmigung für eine Klimaanlage?', a: 'In den meisten Fällen ist keine Baugenehmigung nötig. Bei Denkmalschutz oder bestimmten Fassadeninstallationen kann es Ausnahmen geben. Wir klären das für Sie.' },
+          { q: 'Wie viel Strom verbraucht eine Klimaanlage?', a: 'Moderne Inverter-Klimaanlagen der Klasse A+++ sind sehr effizient. Der tatsächliche Verbrauch hängt von Raumgröße, Außentemperatur und Einstellung ab — wir beraten Sie zur sparsamsten Option.' },
+          { q: 'Kann eine Klimaanlage auch heizen?', a: 'Ja! Moderne Klimaanlagen (Wärmepumpen) können im Winter effizient heizen — oft bis zu -15°C Außentemperatur. Das macht sie zur ganzjährigen Lösung.' },
+          { q: 'Wie oft muss eine Klimaanlage gewartet werden?', a: 'Gemäß der EU-F-Gase-Verordnung ist eine jährliche Inspektion vorgeschrieben. Wir bieten Wartungsverträge an, damit Sie keine Fristen vergessen.' },
+        ].map(item => (
+          <details class="bg-white border border-[var(--color-border)] rounded-xl overflow-hidden group">
+            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-[var(--color-secondary)] text-sm select-none">
+              <span>{item.q}</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0 text-[var(--color-primary)] group-open:rotate-180 transition-transform" aria-hidden="true"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-[var(--color-text-muted)] text-sm leading-relaxed border-t border-[var(--color-border)] pt-4">
+              {item.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-[var(--color-primary)]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-white mb-4">Klimaanlage planen lassen?</h2>
+      <p class="text-orange-100 mb-8">Wir kommen zu Ihnen, beraten kostenlos und erstellen ein unverbindliches Angebot.</p>
+      <a href="tel:+4926514019589" class="bg-white text-[var(--color-secondary)] px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors inline-block">
+        02651 4019589 anrufen
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

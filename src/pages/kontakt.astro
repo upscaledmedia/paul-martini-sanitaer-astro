@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Kontakt | Paul Martini Sanitär · Heizung · Klima Mayen"
+  description="Kontaktieren Sie Paul Martini Sanitär in Kehrig bei Mayen. Telefon: 02651 4019589 · Mo–Fr 7:45–16:00 Uhr. Kostenlose Beratung."
+>
+
+  <!-- Hero — small, dark -->
+  <section class="bg-[var(--color-section-dark)] py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav aria-label="Breadcrumb" class="mb-4">
+        <ol class="flex items-center gap-2 text-sm text-gray-400">
+          <li><a href="/" class="hover:text-[var(--color-primary-light)] transition-colors">Startseite</a></li>
+          <li aria-hidden="true" class="text-gray-600">›</li>
+          <li class="text-gray-200" aria-current="page">Kontakt</li>
+        </ol>
+      </nav>
+      <h1 class="text-white mb-3">Kontakt</h1>
+      <p class="text-gray-300 text-lg">Wir freuen uns auf Ihre Anfrage — einfach anrufen oder schreiben.</p>
+    </div>
+  </section>
+
+  <!-- Notfall Banner -->
+  <div class="bg-[var(--color-primary)] py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+          <span class="text-white font-semibold text-sm">Notfall? Sofort anrufen!</span>
+        </div>
+        <a href="tel:+4926514019589" class="bg-white text-[var(--color-primary)] px-6 py-2 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
+          02651 4019589
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two columns: Info + Form -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Left: Contact info + Map -->
+        <div>
+          <h2 class="mb-8 text-2xl">So erreichen Sie uns</h2>
+
+          <div class="space-y-5 mb-8">
+            <div class="flex items-start gap-4 p-4 bg-[var(--color-surface)] rounded-xl">
+              <div class="w-10 h-10 bg-[var(--color-primary)] rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--color-secondary)] text-sm mb-0.5">Telefon</p>
+                <a href="tel:+4926514019589" class="text-[var(--color-primary-text)] font-bold text-xl hover:underline">02651 4019589</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 bg-[var(--color-surface)] rounded-xl">
+              <div class="w-10 h-10 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--color-secondary)] text-sm mb-0.5">E-Mail</p>
+                <a href="mailto:basti.martini@web.de" class="text-[var(--color-primary-text)] hover:underline">basti.martini@web.de</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 bg-[var(--color-surface)] rounded-xl">
+              <div class="w-10 h-10 bg-[var(--color-primary)] rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--color-secondary)] text-sm mb-0.5">Adresse</p>
+                <address class="not-italic text-[var(--color-text-muted)] text-sm">
+                  Polcher Str. 29A<br />56729 Kehrig bei Mayen
+                </address>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 bg-[var(--color-surface)] rounded-xl">
+              <div class="w-10 h-10 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--color-secondary)] text-sm mb-0.5">Öffnungszeiten</p>
+                <p class="text-[var(--color-text-muted)] text-sm">Mo–Fr: 7:45–16:00 Uhr</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map embed -->
+          <div class="rounded-xl overflow-hidden border border-[var(--color-border)] shadow-sm">
+            <iframe
+              title="Standort Paul Martini Sanitär Kehrig"
+              width="100%"
+              height="280"
+              style="border:0;"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=place_id:ChIJoyJ5ObdEvkcRTntxeAMg9Es"
+            ></iframe>
+          </div>
+          <p class="text-[var(--color-text-muted)] text-xs mt-2">
+            Durch das Laden der Karte werden Daten an Google Maps übertragen. Mehr dazu in unserer <a href="/datenschutz/" class="underline">Datenschutzerklärung</a>.
+          </p>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div>
+          <h2 class="mb-8 text-2xl">Nachricht schreiben</h2>
+          <form method="POST" action="/api/contact" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-sm font-semibold text-[var(--color-secondary)] mb-1.5">
+                  Name <span class="text-[var(--color-primary)]">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Max Mustermann"
+                  class="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-opacity-20 bg-white text-[var(--color-text)]"
+                />
+              </div>
+              <div>
+                <label for="telefon" class="block text-sm font-semibold text-[var(--color-secondary)] mb-1.5">
+                  Telefon <span class="text-[var(--color-primary)]">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="telefon"
+                  name="telefon"
+                  required
+                  placeholder="02651 123456"
+                  class="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-opacity-20 bg-white text-[var(--color-text)]"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-semibold text-[var(--color-secondary)] mb-1.5">
+                E-Mail
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="muster@beispiel.de"
+                class="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-opacity-20 bg-white text-[var(--color-text)]"
+              />
+            </div>
+
+            <div>
+              <label for="betreff" class="block text-sm font-semibold text-[var(--color-secondary)] mb-1.5">
+                Betreff
+              </label>
+              <select
+                id="betreff"
+                name="betreff"
+                class="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-opacity-20 bg-white text-[var(--color-text)]"
+              >
+                <option value="">Bitte wählen...</option>
+                <option value="heizung">Heizung / Wärmepumpe</option>
+                <option value="badezimmer">Badezimmer / Badsanierung</option>
+                <option value="klimaanlage">Klimaanlage</option>
+                <option value="notfall">Notfall / dringende Reparatur</option>
+                <option value="sonstiges">Sonstiges</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="nachricht" class="block text-sm font-semibold text-[var(--color-secondary)] mb-1.5">
+                Ihre Nachricht
+              </label>
+              <textarea
+                id="nachricht"
+                name="nachricht"
+                rows="5"
+                placeholder="Beschreiben Sie kurz Ihr Anliegen..."
+                class="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-opacity-20 bg-white text-[var(--color-text)] resize-vertical"
+              ></textarea>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="datenschutz"
+                name="datenschutz"
+                required
+                class="mt-1 w-4 h-4 accent-[#E85000] flex-shrink-0"
+              />
+              <label for="datenschutz" class="text-sm text-[var(--color-text-muted)]">
+                Ich habe die <a href="/datenschutz/" class="text-[var(--color-primary-text)] underline hover:no-underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung der Anfrage zu. <span class="text-[var(--color-primary)]">*</span>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-[var(--color-primary)] text-white py-4 rounded-xl font-bold text-base hover:bg-[var(--color-primary-dark)] transition-colors"
+            >
+              Nachricht absenden
+            </button>
+
+            <p class="text-xs text-[var(--color-text-muted)] text-center">
+              Wir antworten innerhalb von 1–2 Werktagen. Für Notfälle bitte anrufen.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anfahrt -->
+  <section class="py-12 bg-[var(--color-surface-alt)]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="mb-4 text-2xl">Anfahrt</h2>
+      <p class="text-[var(--color-text-muted)] mb-4">
+        Wir befinden uns in Kehrig, direkt an der Polcher Straße. Von Mayen aus sind wir in ca. 6 Minuten erreichbar, von Polch in ca. 10 Minuten.
+      </p>
+      <p class="text-[var(--color-text-muted)] text-sm">
+        <strong class="text-[var(--color-text)]">Adresse:</strong> Polcher Str. 29A, 56729 Kehrig bei Mayen
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Notdienst & Reparaturen Mayen | Paul Martini Sanitär"
+  description="SHK-Notdienst in Mayen & Umgebung. Heizungsausfall, Rohrbruch, Notfallreparatur — schnell vor Ort. Jetzt anrufen: 02651 4019589"
+>
+
+  <!-- Hero — Urgency/Emergency design -->
+  <section class="bg-[var(--color-section-dark)] py-16 lg:py-24 relative overflow-hidden">
+    <!-- Alert stripe decoration -->
+    <div class="absolute inset-0 opacity-5" aria-hidden="true">
+      <div class="absolute inset-0" style="background-image: repeating-linear-gradient(-45deg, #E85000 0, #E85000 10px, transparent 10px, transparent 20px);"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center gap-2 text-sm text-gray-400">
+          <li><a href="/" class="hover:text-[var(--color-primary-light)] transition-colors">Startseite</a></li>
+          <li aria-hidden="true" class="text-gray-600">›</li>
+          <li><a href="/leistungen/" class="hover:text-[var(--color-primary-light)] transition-colors">Leistungen</a></li>
+          <li aria-hidden="true" class="text-gray-600">›</li>
+          <li class="text-gray-200" aria-current="page">Notdienst &amp; Reparaturen</li>
+        </ol>
+      </nav>
+
+      <!-- EMERGENCY BANNER -->
+      <div class="bg-[var(--color-primary)] rounded-2xl p-6 lg:p-8 mb-10 border-2 border-orange-400">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 bg-white bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-bold text-lg">Notfall? Sofort anrufen!</p>
+              <p class="text-orange-100 text-sm">Bei Heizungsausfall, Rohrbruch oder akuten Störungen</p>
+            </div>
+          </div>
+          <a href="tel:+4926514019589" class="bg-white text-[var(--color-primary)] px-8 py-4 rounded-xl font-bold text-xl hover:bg-gray-100 transition-colors whitespace-nowrap flex items-center gap-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            02651 4019589
+          </a>
+        </div>
+      </div>
+
+      <div class="max-w-2xl">
+        <p class="text-[var(--color-primary)] font-semibold text-sm uppercase tracking-wide mb-3">Schnelle Hilfe</p>
+        <h1 class="text-white mb-6">Notdienst &amp; Reparaturen — wir sind schnell da</h1>
+        <p class="text-gray-300 text-lg leading-relaxed">
+          Als lokaler Betrieb aus Kehrig sind wir schnell in Mayen, Polch und der Umgebung vor Ort.
+          Kurze Wege, direkte Kommunikation, zuverlässige Hilfe.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency situations -->
+  <section class="py-14 bg-[var(--color-surface)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-10">Wann rufen Sie uns an?</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {[
+          { icon: 'M12 2c-4.97 0-9 4.03-9 9 0 2.39.88 4.57 2.33 6.25L4 20h5v-3H7.5C6.56 15.78 6 14.45 6 13c0-3.31 2.69-6 6-6s6 2.69 6 6c0 1.45-.56 2.78-1.5 3.78V20h5l-1.33-2.75C21.12 15.57 22 13.39 22 11c0-4.97-4.03-9-9-9zM9 21h6v-2H9v2z', title: 'Heizungsausfall', desc: 'Keine Heizung, kein warmes Wasser — wir kommen schnell und sorgen für Abhilfe.' },
+          { icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z', title: 'Rohrbruch / Wasserrohr', desc: 'Wasserschaden im Haus? Sofort Haupthahn abdrehen und uns anrufen. Wir sind schnell da.' },
+          { icon: 'M20 6h-2.18c.07-.44.18-.88.18-1.36 0-2.58-2.09-4.64-4.67-4.64-1.49 0-2.82.68-3.73 1.73C8.69 1.06 7.47.5 6.14.5 3.78.5 2 2.28 2 4.64c0 .48.1.92.18 1.36H0v2h20V6zm-8.5-3.14c.45-.87 1.35-1.5 2.46-1.5 1.49 0 2.67 1.17 2.67 2.64 0 .48-.13.9-.31 1.36H11.5L11.5 2.86zm-5.36 0c.44-.87 1.33-1.5 2.36-1.5.93 0 1.78.44 2.32 1.14L11.5 5h-5c-.18-.46-.31-.88-.31-1.36 0-.77.38-1.49.95-1.78zM2 20h20v2H2zm0-8h20v6H2z', title: 'Defekte Sanitäranlagen', desc: 'Toilette, Dusche oder Badewanne defekt — wir reparieren schnell und sauber.' },
+          { icon: 'M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z', title: 'Verstopfte Leitungen', desc: 'Abfluss verstopft oder Abwasser läuft nicht ab — wir beheben das Problem schnell.' },
+          { icon: 'M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z', title: 'Klimaanlagen-Ausfall', desc: 'Klimaanlage läuft nicht oder kühlt nicht mehr ausreichend — wir diagnostizieren und reparieren.' },
+          { icon: 'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z', title: 'Beratung vor Ort', desc: 'Nicht sicher, was das Problem ist? Wir kommen schauen — ehrlich und ohne Kostenüberraschungen.' },
+        ].map(item => (
+          <div class="bg-white rounded-xl p-5 border border-[var(--color-border)] shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 bg-[var(--color-primary)] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#E85000" aria-hidden="true"><path d={item.icon}/></svg>
+            </div>
+            <div>
+              <h3 class="text-[var(--color-secondary)] text-sm font-semibold mb-1">{item.title}</h3>
+              <p class="text-[var(--color-text-muted)] text-xs leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why fast response -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="mb-6 text-2xl">Warum wir schnell sind</h2>
+          <div class="space-y-4">
+            {[
+              { title: 'Lokaler Betrieb', desc: 'Wir sitzen in Kehrig — das sind nur wenige Kilometer bis Mayen, Polch und Umgebung.' },
+              { title: 'Direkte Erreichbarkeit', desc: 'Sie erreichen uns direkt — kein Callcenter, keine Warteschleifen, kein Weiterverbinden.' },
+              { title: 'Gut ausgestattet', desc: 'Unser Fahrzeug ist mit häufig benötigten Ersatzteilen bestückt — viele Reparaturen sofort möglich.' },
+            ].map(item => (
+              <div class="flex gap-4">
+                <div class="w-2 h-full min-h-[40px] bg-[var(--color-primary)] rounded-full flex-shrink-0"></div>
+                <div>
+                  <h3 class="text-[var(--color-secondary)] font-semibold text-sm mb-1">{item.title}</h3>
+                  <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="bg-[var(--color-surface)] rounded-2xl p-8 border border-[var(--color-border)]">
+          <h3 class="text-[var(--color-secondary)] mb-4">Notfall — was tun?</h3>
+          <ol class="space-y-3 text-sm text-[var(--color-text-muted)]">
+            <li class="flex gap-3">
+              <span class="w-6 h-6 bg-[var(--color-primary)] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
+              <span>Bei Wasserrohrbruch: Hauptwasserhahn abdrehen</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="w-6 h-6 bg-[var(--color-primary)] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
+              <span>Bei Gasgeruch: Fenster öffnen, keine Schalter betätigen, sofort raus</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="w-6 h-6 bg-[var(--color-primary)] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
+              <span>Uns anrufen: <a href="tel:+4926514019589" class="font-bold text-[var(--color-primary-text)]">02651 4019589</a></span>
+            </li>
+          </ol>
+          <div class="mt-6 pt-6 border-t border-[var(--color-border)] bg-[var(--color-primary)] rounded-xl p-4 text-center">
+            <a href="tel:+4926514019589" class="text-white font-bold text-xl flex items-center gap-2 justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              02651 4019589
+            </a>
+            <p class="text-orange-100 text-xs mt-1">Mo–Fr 7:45–16:00 Uhr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-14 bg-[var(--color-surface-alt)]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-10">Häufige Fragen zum Notdienst</h2>
+      <div class="space-y-3">
+        {[
+          { q: 'Wie schnell kommen Sie bei einem Notfall?', a: 'Wir versuchen so schnell wie möglich vor Ort zu sein. Als lokaler Betrieb aus Kehrig sind wir schnell in der Region.' },
+          { q: 'Bieten Sie Notdienst außerhalb der Öffnungszeiten?', a: 'Unsere regulären Zeiten sind Mo–Fr 7:45–16:00 Uhr. Bei dringenden Anfragen können Sie versuchen, uns trotzdem zu erreichen.' },
+          { q: 'Was kostet ein Notdienst-Einsatz?', a: 'Der Preis richtet sich nach Aufwand und Material. Wir arbeiten transparent und kommunizieren die Kosten vorab.' },
+          { q: 'Kann ich eine Reparatur auch regulär buchen?', a: 'Natürlich! Für nicht dringende Reparaturen können Sie uns regulär für einen Termin kontaktieren.' },
+        ].map(item => (
+          <details class="bg-white border border-[var(--color-border)] rounded-xl overflow-hidden group">
+            <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-[var(--color-secondary)] text-sm select-none">
+              <span>{item.q}</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="flex-shrink-0 text-[var(--color-primary)] group-open:rotate-180 transition-transform" aria-hidden="true"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-[var(--color-text-muted)] text-sm leading-relaxed border-t border-[var(--color-border)] pt-4">
+              {item.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA — Red/orange urgent CTA -->
+  <section class="py-16 bg-[var(--color-primary)]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <div class="inline-flex items-center gap-2 bg-white bg-opacity-20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
+        <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+        Schnelle Hilfe
+      </div>
+      <h2 class="text-white mb-4">Notfall? Jetzt sofort anrufen!</h2>
+      <p class="text-orange-100 mb-8 text-lg">Wir helfen schnell und unkompliziert — lokaler Betrieb, direkte Kommunikation.</p>
+      <a href="tel:+4926514019589" class="bg-white text-[var(--color-primary)] px-10 py-5 rounded-xl font-bold text-2xl hover:bg-gray-100 transition-colors inline-flex items-center gap-3">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        02651 4019589
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

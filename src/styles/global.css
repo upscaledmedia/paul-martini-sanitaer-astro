@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E85000;
+  --color-primary-light: #F56A1A;
+  --color-primary-dark: #C44000;
+  --color-primary-text: #C44000;
+  --color-secondary: #1A2733;
+  --color-secondary-light: #243444;
+  --color-section-dark: #141E28;
+  --color-surface: #F7F8FA;
+  --color-surface-alt: #F0F2F5;
+  --color-text: #1F2937;
+  --color-text-muted: #6B7280;
+  --color-border: #E5E7EB;
+
+  --font-heading: 'Outfit Variable', 'Outfit', system-ui, sans-serif;
+  --font-body: 'Work Sans Variable', 'Work Sans', system-ui, sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    line-height: 1.65;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--color-secondary);
+  }
+  h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 800; }
+  h2 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); }
+  h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 600; }
+  p { color: var(--color-text-muted); line-height: 1.75; }
+  a { color: var(--color-primary-text); text-decoration: none; }
+  a:hover { color: var(--color-primary-dark); }
+}

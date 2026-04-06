@@ -1,0 +1,17 @@
+{
+  "name": "paul-martini-sanitaer-website",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^6.0.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "@fontsource-variable/outfit": "^5.0.0",
+    "@fontsource-variable/work-sans": "^5.0.0"
+  }
+}

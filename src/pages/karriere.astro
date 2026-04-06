@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Karriere bei Paul Martini Sanitär | Mayen & Kehrig"
+  description="Arbeiten Sie bei einem echten Familienbetrieb — SHK-Ausbildung, Geselle oder Meister gesucht. Paul Martini Sanitär in Kehrig bei Mayen."
+>
+
+  <!-- Hero -->
+  <section class="bg-[var(--color-section-dark)] py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <p class="text-[var(--color-primary)] font-semibold text-sm uppercase tracking-wide mb-3">Karriere</p>
+        <h1 class="text-white mb-6">Arbeiten bei Martini — Handwerk mit Herz</h1>
+        <p class="text-gray-300 text-lg leading-relaxed mb-8">
+          Wir sind ein Familienbetrieb in Kehrig bei Mayen — klein, persönlich, direkt.
+          Bei uns gibt es keine anonymen Hierarchien, keine unverständlichen Entscheidungen.
+          Nur gute Arbeit, ein gutes Team und echte Wertschätzung.
+        </p>
+        <a href="#stellenanzeigen" class="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-[var(--color-primary-dark)] transition-colors">
+          Offene Stellen ansehen
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warum Martini — 5 reasons -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary-text)] font-semibold text-sm uppercase tracking-wide mb-3">Warum zu uns?</p>
+        <h2>5 Gründe, die für uns sprechen</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { num: '01', icon: 'M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z', title: 'Familiäres Team', desc: 'Bei uns kennt jeder jeden. Kurze Absprachen, direktes Feedback, echte Wertschätzung — kein anonymer Konzernbetrieb.' },
+          { num: '02', icon: 'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z', title: 'Sicherer Arbeitsplatz', desc: 'Als etablierter Familienbetrieb mit vielen treuen Stammkunden bieten wir Stabilität — auch in unsicheren Zeiten.' },
+          { num: '03', icon: 'M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5V2.05z', title: 'Weiterbildung', desc: 'Wir investieren in unsere Mitarbeiter. Ob Meisterschule, Fachseminare oder neue Technologien — wir fördern Entwicklung.' },
+          { num: '04', icon: 'M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z', title: 'Faire Arbeitszeiten', desc: 'Mo–Fr 7:45–16:00 Uhr. Keine ständigen Überstunden, faire Planung, Berücksichtigung von Familie und Freizeit.' },
+          { num: '05', icon: 'M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z', title: 'Moderne Ausstattung', desc: 'Gutes Werkzeug, modernes Fahrzeug, aktuelle Technik. Wir sorgen dafür, dass unsere Leute gut ausgerüstet sind.' },
+        ].map(item => (
+          <div class="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)] hover:border-[var(--color-primary)] transition-colors">
+            <div class="flex items-start gap-4 mb-3">
+              <span class="text-[var(--color-primary)] font-bold text-xl" style="font-family: var(--font-heading);">{item.num}</span>
+              <div class="w-10 h-10 bg-[var(--color-primary)] rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d={item.icon}/></svg>
+              </div>
+            </div>
+            <h3 class="text-[var(--color-secondary)] mb-2 text-base">{item.title}</h3>
+            <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stellenanzeigen -->
+  <section id="stellenanzeigen" class="py-16 bg-[var(--color-surface)]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-[var(--color-primary-text)] font-semibold text-sm uppercase tracking-wide mb-3">Offene Stellen</p>
+        <h2>Aktuelle Stellenanzeigen</h2>
+      </div>
+
+      <!-- Job Card -->
+      <div class="bg-white rounded-2xl border-2 border-[var(--color-primary)] shadow-sm p-8 mb-8">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6">
+          <div>
+            <span class="inline-block bg-[var(--color-primary)] text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Vollzeit</span>
+            <h3 class="text-[var(--color-secondary)] text-xl">SHK-Anlagenmechaniker (m/w/d)</h3>
+            <p class="text-[var(--color-text-muted)] text-sm mt-1">Kehrig bei Mayen · ab sofort</p>
+          </div>
+          <a href="#bewerbung" class="bg-[var(--color-primary)] text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[var(--color-primary-dark)] transition-colors whitespace-nowrap">
+            Jetzt bewerben
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+          <div>
+            <h4 class="font-semibold text-[var(--color-secondary)] text-sm mb-2">Ihre Aufgaben</h4>
+            <ul class="space-y-1.5 text-[var(--color-text-muted)] text-sm">
+              <li class="flex items-start gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="#E85000" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Heizungsinstallation und -wartung</li>
+              <li class="flex items-start gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="#E85000" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Badsanierungen und Sanitärinstallation</li>
+              <li class="flex items-start gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="#E85000" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Klimaanlagen-Installation und Wartung</li>
+              <li class="flex items-start gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="#E85000" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Reparaturen und Notfalleinsätze</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-[var(--color-secondary)] text-sm mb-2">Das bringen Sie mit</h4>
+            <ul class="space-y-1.5 text-[var(--color-text-muted)] text-sm">
+              <li class="flex items-start gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1A2733" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Abgeschlossene SHK-Ausbildung</li>
+              <li class="flex items-start gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1A2733" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Führerschein Klasse B</li>
+              <li class="flex items-start gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1A2733" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Zuverlässigkeit und Teamgeist</li>
+              <li class="flex items-start gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1A2733" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Kundenkontakt macht Ihnen Spaß</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-[var(--color-surface)] rounded-xl p-4 mt-4">
+          <p class="text-[var(--color-text-muted)] text-sm">
+            <strong class="text-[var(--color-text)]">Wir bieten:</strong> Faire Vergütung nach Vereinbarung, geregelte Arbeitszeiten (Mo–Fr), familienfreundliches Umfeld, modernes Fahrzeug, Weiterbildungsmöglichkeiten.
+          </p>
+        </div>
+      </div>
+
+      <!-- Ausbildung Card -->
+      <div class="bg-white rounded-2xl border border-[var(--color-border)] shadow-sm p-8">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-5">
+          <div>
+            <span class="inline-block bg-[var(--color-secondary)] text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Ausbildung</span>
+            <h3 class="text-[var(--color-secondary)] text-xl">Azubi SHK-Anlagenmechaniker (m/w/d)</h3>
+            <p class="text-[var(--color-text-muted)] text-sm mt-1">Kehrig bei Mayen · Ausbildungsbeginn nach Vereinbarung</p>
+          </div>
+          <a href="#bewerbung" class="border-2 border-[var(--color-secondary)] text-[var(--color-secondary)] px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[var(--color-secondary)] hover:text-white transition-colors whitespace-nowrap">
+            Jetzt bewerben
+          </a>
+        </div>
+        <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">
+          Du willst einen Handwerksberuf mit Zukunft lernen? Bei uns lernst du alles rund um Heizung, Sanitär und Klima —
+          von echten Profis, in einem familiären Umfeld. Wir nehmen uns Zeit für eine gute Ausbildung.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Initiativbewerbung + Bewerbung -->
+  <section id="bewerbung" class="py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <p class="text-[var(--color-primary-text)] font-semibold text-sm uppercase tracking-wide mb-3">Initiativbewerbung</p>
+          <h2 class="mb-4 text-2xl">Keine passende Stelle dabei?</h2>
+          <p class="text-[var(--color-text-muted)] mb-6 leading-relaxed text-sm">
+            Wir freuen uns auch über Initiativbewerbungen. Wenn Sie ein guter Handwerker sind und zu einem familiären Betrieb passen,
+            würden wir uns gerne kennenlernen — auch ohne aktuelle Stellenanzeige.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-sm text-[var(--color-text-muted)]">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E85000" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <a href="mailto:basti.martini@web.de" class="text-[var(--color-primary-text)] hover:underline">basti.martini@web.de</a>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-[var(--color-text-muted)]">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E85000" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              <a href="tel:+4926514019589" class="text-[var(--color-primary-text)] hover:underline">02651 4019589</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="mb-6 text-2xl">Jetzt bewerben</h2>
+          <form method="POST" action="/api/contact" class="space-y-4">
+            <input type="hidden" name="betreff" value="karriere" />
+            <div>
+              <label for="k-name" class="block text-sm font-semibold text-[var(--color-secondary)] mb-1.5">Name <span class="text-[var(--color-primary)]">*</span></label>
+              <input type="text" id="k-name" name="name" required placeholder="Ihr Name" class="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg text-sm focus:outline-none focus:border-[var(--color-primary)] bg-white text-[var(--color-text)]" />
+            </div>
+            <div>
+              <label for="k-telefon" class="block text-sm font-semibold text-[var(--color-secondary)] mb-1.5">Telefon <span class="text-[var(--color-primary)]">*</span></label>
+              <input type="tel" id="k-telefon" name="telefon" required placeholder="Ihre Telefonnummer" class="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg text-sm focus:outline-none focus:border-[var(--color-primary)] bg-white text-[var(--color-text)]" />
+            </div>
+            <div>
+              <label for="k-email" class="block text-sm font-semibold text-[var(--color-secondary)] mb-1.5">E-Mail</label>
+              <input type="email" id="k-email" name="email" placeholder="Ihre E-Mail" class="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg text-sm focus:outline-none focus:border-[var(--color-primary)] bg-white text-[var(--color-text)]" />
+            </div>
+            <div>
+              <label for="k-nachricht" class="block text-sm font-semibold text-[var(--color-secondary)] mb-1.5">Kurze Vorstellung</label>
+              <textarea id="k-nachricht" name="nachricht" rows="4" placeholder="Erzählen Sie uns kurz von sich — Ausbildung, Erfahrung, Wünsche..." class="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg text-sm focus:outline-none focus:border-[var(--color-primary)] bg-white text-[var(--color-text)] resize-vertical"></textarea>
+            </div>
+            <div class="flex items-start gap-3">
+              <input type="checkbox" id="k-datenschutz" name="datenschutz" required class="mt-1 w-4 h-4 accent-[#E85000] flex-shrink-0" />
+              <label for="k-datenschutz" class="text-sm text-[var(--color-text-muted)]">
+                Ich habe die <a href="/datenschutz/" class="text-[var(--color-primary-text)] underline">Datenschutzerklärung</a> gelesen und bin einverstanden. <span class="text-[var(--color-primary)]">*</span>
+              </label>
+            </div>
+            <button type="submit" class="w-full bg-[var(--color-primary)] text-white py-3.5 rounded-xl font-bold text-sm hover:bg-[var(--color-primary-dark)] transition-colors">
+              Bewerbung absenden
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
