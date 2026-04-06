@@ -5,6 +5,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="Kontakt | Paul Martini Sanitär · Heizung · Klima Mayen"
   description="Kontaktieren Sie Paul Martini Sanitär in Kehrig bei Mayen. Telefon: 02651 4019589 · Mo–Fr 7:45–16:00 Uhr. Kostenlose Beratung."
 >
+  <Fragment slot="head">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  </Fragment>
 
   <!-- Hero — small, dark -->
   <section class="bg-[var(--color-section-dark)] py-12 lg:py-16">
@@ -195,6 +198,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 Ich habe die <a href="/datenschutz/" class="text-[var(--color-primary-text)] underline hover:no-underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung der Anfrage zu. <span class="text-[var(--color-primary)]">*</span>
               </label>
             </div>
+
+            <!-- Cloudflare Turnstile -->
+            <div
+              class="cf-turnstile"
+              data-sitekey="0x4AAAAAABkMYHeKNH5_BdGv"
+              data-theme="light"
+              data-language="de"
+            ></div>
 
             <button
               type="submit"
